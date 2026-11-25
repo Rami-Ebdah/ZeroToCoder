@@ -1,0 +1,328 @@
+:root {
+  --primary-color: #6c5ce7;
+  --secondary-color: #0984e3;
+  --danger-color: #d63031;
+  --success-color: #00b894;
+  --light-gray: #f1f2f6;
+  --dark-gray: #2d3436;
+  --text-color: #2c3e50;
+  --bg-white: #ffffff;
+  --border-radius: 12px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.admin-courses-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+/* Headings */
+.admin-courses-container h1 {
+  font-size: 2.2rem;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.admin-courses-container h2 {
+  font-size: 1.8rem;
+  color: var(--dark-gray);
+  /* margin-top: 3rem; */
+  border-bottom: 2px solid #dfe6e9;
+  padding-bottom: 0.5rem;
+}
+
+/* Form */
+.course-form {
+  background-color: var(--bg-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid #dcdde1;
+  background-color: #f9f9f9;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Category Checkboxes */
+.category-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.category-checkboxes label {
+  background-color: #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-checkboxes label:hover {
+  background-color: #d0d0d0;
+}
+
+.category-checkboxes input[type="checkbox"] {
+  accent-color: var(--primary-color);
+}
+
+/* Buttons */
+button {
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0rem 1.4rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #019875;
+}
+
+.cancel-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #b32424;
+}
+
+.edit-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.edit-btn:hover {
+  background-color: #0769b2;
+}
+
+.delete-btn {
+  background-color: var(--danger);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Table */
+.courses-list {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+tr:hover {
+  background-color: #f4f4f4;
+}
+
+td:last-child {
+  white-space: nowrap;
+}
+/* Dark Mode Variables */
+:root {
+  /* ... existing light mode variables ... */
+  
+  /* Dark mode colors */
+  --dark-primary-color: #7c6cf8;
+  --dark-secondary-color: #1a9cfc;
+  --dark-danger-color: #ff6b6b;
+  --dark-success-color: #55efc4;
+  --dark-bg-color: #1e272e;
+  --dark-card-bg: #2b2b2b;
+  --dark-text-color: #f5f6fa;
+  --dark-border-color: #3d484d;
+  --dark-light-gray: #3d484d;
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
+}
+
+body.dark .admin-courses-container h1,
+body.dark .admin-courses-container h2 {
+  color: var(--dark-text-color);
+}
+
+body.dark .admin-courses-container h2 {
+  border-bottom-color: var(--dark-border-color);
+}
+
+/* Form Styles */
+body.dark .course-form {
+  background-color: var(--dark-);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea,
+body.dark .form-group select {
+  background-color: #3d484d;
+  border-color: var(--dark-border-color);
+  color: var(--dark-text-color);
+}
+
+body.dark .form-group input:focus,
+body.dark .form-group textarea:focus,
+body.dark .form-group select:focus {
+  border-color: var(--dark-primary-color);
+  background-color: #3d484d;
+  box-shadow: 0 0 0 3px rgba(124, 108, 248, 0.3);
+}
+
+/* Category Checkboxes */
+body.dark .category-checkboxes label {
+  background-color: #3d484d;
+  color: var(--dark-text-color);
+}
+
+body.dark .category-checkboxes label:hover {
+  background-color: #4b5a62;
+}
+
+/* Table Styles */
+body.dark table {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark th {
+  background-color: var(--dark-primary-color);
+}
+
+body.dark td {
+  border-bottom-color: var(--dark-border-color);
+  color: var(--dark-text-color);
+}
+
+body.dark tr:hover {
+  background-color: #3d484d;
+}
+
+body.dark tr:nth-child(even) {
+  background-color: #2d3436;
+}
+
+/* Button Adjustments for Dark Mode */
+/* body.dark .save-btn {
+  color: var(--dark-bg-color);
+} */
+
+body.dark .cancel-btn {
+  background-color: var(--dark-danger-color);
+}
+
+body.dark .edit-btn {
+  background-color: var(--secondaryf);
+}
+
+body.dark .delete-btn {
+  background-color: var(--danger);
+}
+
+.search-filter {
+  margin: 15px 0;
+}
+
+.search-input {
+  padding: 8px 15px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}

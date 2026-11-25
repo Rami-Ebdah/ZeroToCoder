@@ -1,0 +1,49 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace ZeroToCoder.Api.Models;
+
+public class User
+{
+    [Key]
+    public int UserID { get; set; }
+
+    [Required, MaxLength(100)]
+    public string FullName { get; set; } = string.Empty;
+
+    [Required, MaxLength(100)]
+    public string Email { get; set; } = string.Empty;
+
+    [Required, MaxLength(255)]
+    public string PasswordHash { get; set; } = string.Empty;
+
+    public DateTime? DateOfBirth { get; set; }
+
+    [MaxLength(200)]
+    public string? Image { get; set; }
+
+    public string? Bio { get; set; }
+
+    [MaxLength(255)]
+    public string? Expertise { get; set; }
+
+    [MaxLength(50)]
+    public string? Phone { get; set; }
+
+    [MaxLength(50)]
+    public string? Address { get; set; }
+
+    [Required, MaxLength(20)]
+    public string Role { get; set; } = Common.Roles.User;
+
+    public DateTime? DateJoined { get; set; }
+
+    public bool IsBlocked { get; set; }
+
+    public List<Post> Posts { get; set; } = [];
+    public List<Reply> Replies { get; set; } = [];
+    public List<PostLike> PostLikes { get; set; } = [];
+    public List<ReplyLike> ReplyLikes { get; set; } = [];
+    public List<PostReport> PostReports { get; set; } = [];
+    public List<ReplyReport> ReplyReports { get; set; } = [];
+    public List<Enrollment> Enrollments { get; set; } = [];
+}

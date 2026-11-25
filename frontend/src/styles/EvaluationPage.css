@@ -1,0 +1,77 @@
+.evaluation-page {
+    background-color: var(--secondary);
+    min-height: 100vh;
+  }
+  
+  .evaluation-page .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  .quizzes-section, .final-exam-section {
+    margin-bottom: 40px;
+  }
+  
+  .quizzes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .quiz-card, .exam-card {
+    background-color: var(--bgHeader);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .quiz-card button, .exam-card button {
+    padding: 8px 16px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .quiz-card button:disabled, .exam-card button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .exam-card.completed {
+    border-left: 5px solid #4CAF50;
+  }
+  
+  .score {
+    color: var(--blue);
+    font-weight: bold;
+  }
+  
+  .eligibility {
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  .certificate-eligibility {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+  }
+  
+  .view-certificate-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+  }

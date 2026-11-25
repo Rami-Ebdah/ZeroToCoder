@@ -1,0 +1,106 @@
+/* === Theme Variables === */
+:root {
+  --colorc-bg: #f5f5fa;
+  --colorc-text: #1a1a1a;
+  --colorc-card: #ffffff;
+  --colorc-purple: #6a0dad;
+  --colorc-blue: #007bff;
+  --colorc-green: #28a745;
+  --colorc-red: #dc3545;
+  --colorc-border: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  --colorc-bg: #1e1e2f;
+  --colorc-text: #f0f0f0;
+  --colorc-card: #2c2c3c;
+  --colorc-border: #444;
+}
+
+/* === Page Structure === */
+body {
+  color: var(--colorc-text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.coupons-container {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+.coupons-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--title);
+  margin-bottom: 30px;
+}
+
+.coupons-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* === Coupon Card === */
+.coupon-card {
+  background-color: var(--bgHeader);
+  border: 1px solid var(--colorc-border);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.coupon-card:hover {
+  transform: translateY(-5px);
+}
+
+.coupon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coupon-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--title);
+  font-family: Times New Roman;
+}
+
+.discount-badge {
+  background-color: var(--colorc-purple);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.coupon-card p {
+  margin: 10px 0;
+  font-family: Times New Roman;
+}
+
+/* === Button === */
+.apply-coupon-btn {
+  margin-top: 10px;
+  background-color: var(--colorc-green);
+  padding: 6px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* === Loading & Empty State === */
+.coupons-container p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: gray;
+}

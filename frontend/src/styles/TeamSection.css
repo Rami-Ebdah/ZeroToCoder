@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Sora:wght@300;400;600&display=swap");
+
+.team-section {
+  padding: 4rem 2rem;
+  background: var(--bg-gradient);
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+.team-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: ver(--title);
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
+  font-family: "Playfair Display", serif;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: popIn 0.8s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 36px rgba(75, 0, 130, 0.3);
+}
+
+.image-container {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .image-container {
+  transform: scale(1.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.role {
+  font-weight: bold;
+  color:var(--blue);
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+}
+
+.desc {
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.supervisor-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.supervisor-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--main-color);
+}
+
+.supervisor-card {
+  margin: 0 auto;
+  max-width: 300px;
+  border: 2px solid var(--main-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}

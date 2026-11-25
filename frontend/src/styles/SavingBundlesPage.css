@@ -1,0 +1,182 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --subtitle-color: #555;
+  --card-bg: #f9f9f9;
+  --card-border: #ddd;
+  --primary-color: #007bff;
+  --discount-color: #28a745;
+  --original-price-color: #888;
+  --btn-bg: #007bff;
+  --btn-text: #fff;
+  --badge-bg: #ffcc00;
+  --badge-text: #000;
+}
+
+body.dark-mode {
+  --bg-color: #1c1c1e;
+  --text-color: #f1f1f1;
+  --subtitle-color: #aaa;
+  --card-bg: #2c2c2e;
+  --card-border: #444;
+  --primary-color: #66b2ff;
+  --discount-color: #4ddf88;
+  --original-price-color: #aaa;
+  --btn-bg: #0056b3;
+  --btn-text: #fff;
+  --badge-bg: #ffb300;
+  --badge-text: #000;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text-color);
+}
+
+.bundles-container {
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.bundles-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.bundles-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--title);
+}
+
+.bundles-subtitle {
+  color: var(--subtitle-color);
+  font-size: 1rem;
+}
+
+.bundles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.bundle-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.bundle-card:hover {
+  transform: scale(1.02);
+}
+
+.best-deal-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: var(--badge-text);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.bundle-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.bundle-courses h4 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--subtitle);
+}
+
+.bundle-courses ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--title);
+}
+.bundle-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.bundle-bottom {
+  margin-top: auto;
+  padding-top: 16px;
+}
+.bundle-courses li {
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.course-checkmark {
+  color: var(--discount-color);
+  margin-right: 0.5rem;
+}
+
+.bundle-pricing {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.price-original {
+  text-decoration: line-through;
+  color: var(--original-price-color);
+}
+
+.price-discounted {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--discount-color);
+}
+
+.price-savings {
+  color: var(--discount-color);
+}
+
+.enroll-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.enroll-btn:hover:not(:disabled) {
+  background-color: var(--btn-bg);
+}
+
+.enroll-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.browse-coupons-btn {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.browse-coupons-btn:hover {
+  text-decoration: underline;
+}
+

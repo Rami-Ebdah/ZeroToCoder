@@ -1,0 +1,241 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 678px;
+  max-width: 100%;
+  min-height: 400px;
+  margin: auto;
+  top: 20%;
+`;
+
+export const SignUpContainer = styled.div`
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  left: -98px;
+  width: 60%;
+  opacity: 0;
+  z-index: 1;
+  ${(props) =>
+    props.signinIn !== true
+      ? `
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+  `
+      : null}
+`;
+
+export const SignInContainer = styled.div`
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  left: -30px;
+  width: 60%;
+  z-index: 2;
+  ${(props) =>
+    props.signinIn !== true ? `transform: translateX(100%);` : null}
+`;
+
+export const Form = styled.form`
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+`;
+
+export const Title = styled.h1`
+  font-weight: bold;
+  margin: 0;
+  color: black;
+`;
+
+export const Input = styled.input`
+  background-color: #eee;
+  border-radius: 20px;
+  border: none;
+  padding: 12px 15px 12px 40px;
+  margin: 10px 0;
+  width: 100%;
+`;
+
+export const InputWrapper = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+export const Icon = styled.span`
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(92, 84, 114);
+  z-index: 1;
+`;
+
+export const IconR = styled.span`
+  position: absolute;
+  right: 17px;
+  top: 55%;
+  transform: translateY(-50%);
+  color: rgb(92, 84, 114);
+  z-index: 1;
+`;
+
+export const Button = styled.button`
+  border-radius: 40px;
+  width: fit-content;
+  border: 1.5px solid rgb(173, 114, 154);
+  background-color: rgb(62, 28, 80);
+  color: #ffffff;
+  font-size: 12.5px;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin: 14px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  &:active {
+    transform: scale(0.95);
+  }
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const GhostButton = styled(Button)`
+  background-color: transparent;
+  border-color: #ffffff;
+`;
+
+export const ForgotPasswordLink = styled.a`
+  color: #333;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const Anchor = styled.a`
+  color: blue;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 15px 0;
+  transition: text-decoration 0.3s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const SmallText = styled.p`
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+`;
+
+export const OverlayContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+  ${(props) =>
+    props.signinIn !== true ? `transform: translateX(-100%);` : null}
+`;
+
+export const Overlay = styled.div`
+  background: rgb(142, 102, 150);
+  background: -webkit-linear-gradient(to right, #852467, rgb(119, 30, 91));
+  background: linear-gradient(to right, rgb(58, 45, 172), #852467);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  ${(props) => (props.signinIn !== true ? `transform: translateX(50%);` : null)}
+`;
+
+export const OverlayPanel = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+`;
+
+export const LeftOverlayPanel = styled(OverlayPanel)`
+  transform: translateX(-20%);
+  ${(props) => (props.signinIn !== true ? `transform: translateX(0);` : null)}
+  & ${Title} {
+    color: white;
+  }
+`;
+
+export const RightOverlayPanel = styled(OverlayPanel)`
+  right: 0;
+  transform: translateX(0);
+  ${(props) => (props.signinIn !== true ? `transform: translateX(20%);` : null)}
+  & ${Title} {
+    color: white;
+  }
+`;
+
+export const Paragraph = styled.p`
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+`;
+
+export const RememberForgot = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+`;
+
+export const CheckboxLabel = styled.label`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #333;
+`;
+
+export const ErrorMessage = styled.p`
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+`;

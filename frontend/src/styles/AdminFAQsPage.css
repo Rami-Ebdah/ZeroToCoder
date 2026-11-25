@@ -1,0 +1,223 @@
+/* =========================
+ 1. Theme Variables
+========================= */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --bg: #f8f9fa;
+  --text: #2c3e50;
+  --title: #1a1a1a;
+  --primaryf: #6c5ce7;
+  --secondaryf: #00b840;
+  --danger: #e74c3c;
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+body.dark {
+  --white: #1e1e2f;
+  --bg: #121212;
+  --text: #f1f1f1;
+  --title: #ffffff;
+  --primaryf: #a29bfe;
+  --secondaryf: #36d659;
+  --danger: #f93c3c;
+  --shadow: 0 5px 20px rgba(255, 255, 255, 0.05);
+  --shadow-hover: 0 8px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+ 2. General Layout
+========================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  transition: var(--transition);
+}
+
+.admin-container {
+  max-width: 1200px;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+ 3. Headings
+========================= */
+.admin-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--title);
+  position: relative;
+}
+
+/* =========================
+ 4. Form
+========================= */
+.faq-form {
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--primaryf);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #dcdde1;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: #fafafa;
+  color: var(--text);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primaryf);
+  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.1);
+  background-color: var(--white);
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* =========================
+ 5. Buttons
+========================= */
+.buttonQ {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  margin-right: 0.75rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+button:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+button[type="submit"] {
+  background-color: var(--blue);
+}
+
+button[type="submit"]:hover {
+  background-color: #0b5ed7;
+}
+
+button[type="button"] {
+  background-color: var(--danger);
+}
+
+button[type="button"]:hover {
+  background-color: #c0392b;
+}
+
+/* =========================
+ 6. FAQ Table
+========================= */
+.faq-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+th {
+  background: linear-gradient(to right, blue);
+  border-right: 1px solid black;
+  color: white;
+}
+
+tr:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+td:last-child {
+  white-space: nowrap;
+}
+
+/* =========================
+ 7. Table Action Buttons
+========================= */
+td button {
+  margin: 0 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+td button:first-child {
+  background-color: var(--secondaryf);
+}
+
+td button:first-child:hover {
+  background-color: #00a27a;
+}
+
+td button:last-child {
+  background-color: var(--danger);
+}
+
+td button:last-child:hover {
+  background-color: #c0392b;
+}
+
+/* =========================
+ 8. Responsive Design
+========================= */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 1rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .faq-form {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}

@@ -1,0 +1,130 @@
+.review-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #4a5568;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  color: #2d3748;
+}
+
+.review-container {
+  padding: 1rem;
+}
+
+.review-container h2 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.review-container p {
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.rating-section {
+  margin-bottom: 2rem;
+}
+
+.rating-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.star {
+  font-size: 2rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star.active {
+  color: #f6ad55;
+}
+
+.comment-section {
+  margin-bottom: 2rem;
+}
+
+.comment-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.comment-section textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 150px;
+}
+
+.comment-section textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+}
+
+.submit-button {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #3182ce;
+}
+
+.submit-button:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #e53e3e;
+  background-color: #fff5f5;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #fc8181;
+}
+
+.success-message {
+  color: #38a169;
+  background-color: #f0fff4;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #9ae6b4;
+}
